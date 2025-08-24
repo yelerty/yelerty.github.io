@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개인정보 처리방침 / Privacy Policy</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; }
+    h1 { text-align: center; }
+    .tabs { text-align: center; margin-bottom: 20px; }
+    .tabs button {
+      margin: 0 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+    }
+    .tabs button.active {
+      background-color: #007aff;
+      color: white;
+      border-color: #007aff;
+    }
+    .content { display: none; }
+    .content.active { display: block; }
+  </style>
+</head>
+<body>
+  <h1>개인정보 처리방침 / Privacy Policy</h1>
+
+  <div class="tabs">
+    <button id="koBtn" class="active" onclick="switchLang('ko')">한국어</button>
+    <button id="enBtn" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- 한국어 -->
+  <div id="ko" class="content active">
+    <p>본 애플리케이션(이하 "앱")은 사용자의 현재 위치를 기반으로 가장 가까운 지하철역의 실시간 열차 도착 정보를 제공하는 무료, 오프라인 iOS 앱입니다.</p>
+
+    <h2>1. 수집하는 개인정보 항목</h2>
+    <p>- <strong>위치 정보</strong>: 사용자의 현재 위치를 파악하기 위해 기기의 위치 서비스(GPS 등)를 이용합니다.<br>
+    - 그 외의 개인정보(이름, 이메일, 연락처 등)는 일절 수집하지 않습니다.</p>
+
+    <h2>2. 개인정보의 이용 목적</h2>
+    <p>- 사용자의 위치를 기반으로 가장 가까운 지하철역을 자동으로 검색하고, 해당 역의 실시간 도착 정보를 제공하기 위한 목적입니다.</p>
+
+    <h2>3. 개인정보의 보관 및 처리</h2>
+    <p>- 본 앱은 사용자의 위치 데이터를 서버에 저장하거나 제3자와 공유하지 않습니다.<br>
+    - 위치 정보는 오직 앱 실행 중 기기 내에서만 사용되며, 앱 종료 시 별도로 보관되지 않습니다.</p>
+
+    <h2>4. 제3자 제공</h2>
+    <p>- 본 앱은 수집된 위치 정보를 어떠한 외부 서버나 제3자에게도 전송하지 않습니다.</p>
+
+    <h2>5. 이용자의 권리</h2>
+    <p>- 사용자는 기기 설정에서 언제든지 위치 서비스 권한을 변경하거나 철회할 수 있습니다.<br>
+    - 위치 권한을 거부할 경우 일부 기능(가까운 역 자동 검색 등)의 사용이 제한될 수 있습니다.</p>
+
+    <h2>6. 개인정보 보호책임자</h2>
+    <p>- 앱 개발자: [개발자 이름 또는 팀명]<br>
+    - 이메일: [연락 가능한 이메일 주소]</p>
+
+    <h2>7. 정책 변경</h2>
+    <p>- 본 개인정보 처리방침은 앱 기능 변경 또는 관련 법령 개정에 따라 수정될 수 있으며, 수정 시 본 페이지를 통해 공지합니다.</p>
+
+    <p><em>최종 업데이트: 2025년 8월 24일</em></p>
+  </div>
+
+  <!-- 영어 -->
+  <div id="en" class="content">
+    <p>This application ("the App") is a free, offline iOS app that provides real-time subway arrival information for the nearest station based on the user's current location.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>- <strong>Location Data</strong>: The App uses the device's location services (e.g., GPS) to determine the nearest subway station.<br>
+    - No other personal information (such as name, email, or contact details) is collected.</p>
+
+    <h2>2. Purpose of Use</h2>
+    <p>- Location data is used solely to automatically search for the nearest station and to display real-time train arrival information.</p>
+
+    <h2>3. Data Retention and Processing</h2>
+    <p>- The App does not store location data on any server or share it with third parties.<br>
+    - Location data is only used locally on the device while the App is running and is not retained after the App is closed.</p>
+
+    <h2>4. Third-Party Disclosure</h2>
+    <p>- The App does not transmit collected location data to any external server or third party.</p>
+
+    <h2>5. User Rights</h2>
+    <p>- Users can change or revoke location service permissions at any time through the device settings.<br>
+    - If location access is denied, certain features (such as automatic nearest station search) may be limited.</p>
+
+    <h2>6. Contact</h2>
+    <p>- Developer: [Your Name or Team Name]<br>
+    - Email: [Your Contact Email]</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>- This Privacy Policy may be updated due to functional changes or legal requirements. Any changes will be posted on this page.</p>
+
+    <p><em>Last updated: August 24, 2025</em></p>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById('ko').classList.remove('active');
+      document.getElementById('en').classList.remove('active');
+      document.getElementById('koBtn').classList.remove('active');
+      document.getElementById('enBtn').classList.remove('active');
+
+      if(lang === 'ko') {
+        document.getElementById('ko').classList.add('active');
+        document.getElementById('koBtn').classList.add('active');
+      } else {
+        document.getElementById('en').classList.add('active');
+        document.getElementById('enBtn').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
